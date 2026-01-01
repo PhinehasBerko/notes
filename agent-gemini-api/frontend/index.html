@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Data Extractor Prototype</title>
+    <style>
+        #drop-zone {
+            width: 100%;
+            height: 200px;
+            border: 2px dashed #4A90E2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: sans-serif;
+            color: #4A90E2;
+            transition: background 0.3s;
+        }
+        #drop-zone.dragover { background: #e1f0ff; }
+        #file-list { margin-top: 20px; font-family: sans-serif; }
+        .file-item { padding: 5px; border-bottom: 1px solid #eee; }
+        button { margin-top: 20px; padding: 10px 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>1. Upload PDFs</h2>
+    <div id="drop-zone">Drag and drop your 4-13 page PDFs here</div>
+    <div id="file-list"></div>
+
+    <h2>2. Define Columns</h2>
+    <input type="text" id="columns" placeholder="e.g. Invoice Date, Total, Vendor" style="width: 100%">
+
+    <button id="process-btn">Process & Download CSV</button>
+
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileList = document.getElementById('file-list');
+        const processBtn = document.getElementById('process-btn');
+        let uploadedFiles = [];
+
+        // Handle Drag & Drop Visuals
+        dropZone.ondragover = (e) => { e.preventDefault(); dropZone.classList.add('dragover'); };
+        dropZone.ondragleave = () => dropZone.classList.remove('dragover');
+
+        dropZone.ondrop = (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            
+            const files = Array.from(e.dataTransfer.files);
+            files.forEach(file => {
+                if (file.type === "application/pdf") {
+                    uploadedFiles.push(file);
+                    fileList.innerHTML += `<div class="file-item">${file.name}</div>`;
+                }
+            });
+        };
+
+        processBtn.onclick = async () => {
+            if (uploadedFiles.length === 0) return alert("Upload files first!");
+
+            const formData = new FormData();
+            uploadedFiles.forEach(file => formData.append('pdfs', file));
+            formData.append('columns', document.getElementById('columns').value);
+
+            processBtn.innerText = "Processing (Wait for delays)...";
+
+            try {
+                // Point this to your Node.js backend endpoint
+                const response = await fetch('http://localhost:3000/process', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = "extracted_data.csv";
+                document.body.appendChild(a);
+                a.click();
+                
+                processBtn.innerText = "Process & Download CSV";
+            } catch (err) {
+                console.error(err);
+                alert("Error processing files. Check backend console.");
+            }
+        };
+    </script>
+</body>
+</html>
