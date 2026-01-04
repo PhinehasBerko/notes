@@ -8,30 +8,77 @@
     <meta name = "description" content="Providing indepth knowledge and understanding for Software Devs" />
 
     <title>Learning Hub</title>
+    <link rel="stylesheet" href="./CSS//styles.css" />
 </head>
 <body>
-    <h1> HTML Basics</h1>
-    <ul>
-        <li>
-            <strong>Role of HTML: </strong> HTML represents the content and structure of the web page.
-        </li>
-        <li>
-            <strong>HTML Elements: </strong>  Elements are the building blocks for an HTML document. They represent headings, paragraphs, links, images and more. 
-            Most HTML elements consist of an opening tag (&lt; elementName &gt; ) and a closing tag (&lt;/elementName&gt;).
-        </li>
-        <li>
-            <strong>Void Elements: </strong> Void elements cannot have any content and only have a start tag. 
-            Examples include img and meta elements.
-            <p>
-                It is common to see some codebases that include a forward slash / inside the void element. 
-                Both of these are acceptable:
-            </p>
-        </li>
-        <li>
-            <strong>Attributes: </strong> An attribute is a value placed inside the opening tag of an HTML element.
-             Attributes provide additional information about the element or specify how the element should behave. 
-            Here is the basic syntax for an attribute: &lt; element attribute="value"&gt; &lt;/element &gt;
-        </li>
-    </ul>
+    <header>
+        <h1>Personal Bio Page</h1>
+    </header>
+    <main>
+        <!--This section talks about brief self intro with my picture -->
+        <section>
+            <img src="./assest/Phinehas.JPG" alt="picture of Phinehas Berko"/>
+            <fieldset>
+                <legend>Who am I?</legend>
+                <p>
+                    I am a young and passionate individual with keen curiousity and interest in Software Development,
+                    and the use of Artificial Intelligence to develop,manage and improve agriculture practices in 
+                    areas such as crop farming, animal rearing and food-waste management.
+                </p>
+            </fieldset>
+            
+        </section>
+        <!-- This section will talk about my goals -->
+        <section>
+            <fieldset>
+                <legend>What are my Goals?</legend>
+                <p>
+                    I am a young and passionate individual with keen curiousity and interest in Software Development,
+                    and the use of Artificial Intelligence to develop,manage and improve agriculture practices in 
+                    areas such as crop farming, animal rearing and food-waste management.
+                </p>
+            </fieldset>
+            <img src="./assest/Phinehas.JPG" alt="picture of Phinehas Berko"/>
+        </section>
+        
+
+        <!-- This section will talk about my education -->
+         <section>
+            <fieldset>
+                <legend>Educational Journey:</legend>
+                <ul>
+                    <li>University of Mines and Technology-UMaT</li>
+                    <li>Sunyani Senior High School-SUSEC</li>
+                    <li>Great Faith Academy</li>
+                </ul>
+            </fieldset>
+            <img src="image-of-school.png" alt="an image of a school" />
+         </section>
+        <!-- This section will talk about my career -->
+       
+         <section>
+            <fieldset>
+                <legend>Career Path:</legend>
+                <ul>
+                    <li>Project- Data Analysis</li>
+                    <li>Software Engineer</li>
+                    <li>Data Scientist</li>
+                    <li>Agri-preneur</li>
+                </ul>
+            </fieldset>
+            <img src="image-of-career-path.png" alt="image of my career path">
+         </section>
+        <!-- This section will talk about my hobbies -->
+         <section >
+            <fieldset id="hobbies">
+                <legend>Hobbies📖:</legend>
+                <p>I have already fall in love💝 with reading and piano and nothing else can win my heart</p>
+            </fieldset>
+         </section>
+
+    </main>
+    <footer>
+        <p>All right reserved &copy; Phiny 👌</p>
+    </footer>
 </body>
 </html>
