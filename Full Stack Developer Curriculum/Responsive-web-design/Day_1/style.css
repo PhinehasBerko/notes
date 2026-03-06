@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+}
+
+/* .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1rem;  adds spacing between columns 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 30%);
+    padding: 1rem;           add padding inside container if needed 
+}
+
+.sidebar, .main, .aside {
+    padding: 1rem;           use rem for consistent spacing 
+    background-color: blue;
+}
+.main{
+    padding: 1rem;          use rem for consistent spacing 
+    background-color: rgb(178, 19, 82);
+}
+.aside {
+    padding: 1rem;          use rem for consistent spacing 
+    background-color: burlywood;
+} */
+/* Fluid Grid using Flexbox */
+/* .container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: bisque;
+}
+
+.sidebar {
+    flex: 0 0 30%;
+    background-color: aqua;
+}
+
+.main {
+    flex: 1;
+    background-color: aquamarine;
+} */
+
+/* Fluid Grid using CSS Grid - the ultimate fluid tool */
+/* .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: burlywood;
+}
+.sidebar {
+  background: #f0f0cc;
+}
+.main {
+  background: #d0d4d5;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: lightblue;
+} */
+
+/* html {
+    font-size: 18px;
+}
+.card {
+
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;    
+    border-radius: 8px;
+    background-color: blueviolet;
+    padding: 1em;
+     box-shadow: 0 4px 8px rgba(0,0,0,0.2)
+    
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    height: auto;
+    background-size: contain;
+}
+.card-content {
+    padding: 1.5rem;
+    color: gold;
+}
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+} */
+/* Assignment 3 */
+html {
+    font-size: 18px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10%;
+    height:100vh;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 20%);
+}
+
+.hero-text {
+    padding: 8%;
+    color: hsl(0, 0%, 80%); 
+}
+
+.name {
+    font-size: clamp(1rem, 6vw, 2.5rem);
+    font-weight: 900;
+}
+
+.btn-container  {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.btn {
+    padding: 2%;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: hsl(0, 0%, 80%);
+    background-color: hsl(42, 91%, 44%);
+}
+
+.img-container img {
+   
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 4px 4px 4px hsl(0,0%, 30%);
+} 
