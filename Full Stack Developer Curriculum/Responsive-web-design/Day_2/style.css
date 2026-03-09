@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    max-width: 25rem;
+    width: 50%;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero {
+  background-image: url('../../assest/Phinehas.JPG');
+  background-size: cover;      /* covers the whole area, cropping if needed */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+}
