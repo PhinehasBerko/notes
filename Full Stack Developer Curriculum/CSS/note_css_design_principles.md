@@ -20,7 +20,7 @@
 * The law of similarity makes design better, consistent and easier to implement.
 * The law of proximity gives a better understanding of layout and spacing.
 
-## Rule #3: Elemnts need more spacing than you think.
+## Rule #3: Elements need more spacing than you think.
 
 * Users scan the whole UI before focusing on individual elements - so start with a lot of spacing and look at the design as a whole then start to remove it until u're happy with the results.
 * Doing this manually becomes boring so a system must be set inplace.
@@ -52,12 +52,12 @@ preference.
 
 ## Rule #5: Hierarchy is everything.
 
-* We need to emphasis certain elementson the page to help users navigate and find important action.
+* We need to emphasis certain elements on the page to help users navigate and find important action.
 
-* To Do That: we can use size weight and color
+* To Do That: we can use size, weight and color
  - This can be easily overdone so start small. (small changes results in big impact or overall design)
 
-NB: To emphasize an element, ask urself, what's the firth thing the user will look for 
+NB: To emphasize an element, ask urself, what's the first thing the user will look for 
  [e.g: Title], sometimes to emphasize an element all u do is de-emphasis competing (sub) element.
 
 NB: Good design is less design and almost alway more design results into an uglier design (few exception tough).
@@ -76,7 +76,7 @@ NB:
 - Try using cards for Bland elements
 
 ### QUESTION: How do u get all these Ideas?
-- Creativity as a process not a moment.
+- Creativity is a process not a moment.
 
 ## Process for Creativity
 

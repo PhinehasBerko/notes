@@ -42,3 +42,38 @@
     top: 40px;
     left: 40px;
 }
+/* Attribute Selectors */
+a {
+  display: block;
+}
+
+a[href] {
+  color: blue;
+  text-decoration: underline;
+}
+a[title] {
+  font-weight: bold;
+  text-decoration: none;
+}
+/* combine attribute selectors to get even more precise */
+a[href][title] {
+  display:block;
+  color: green;
+}
+/* Matching a single value within a space-seperated list */
+a[class~="primary"] {
+  color: red;
+  font-weight: bold;
+}
+
+p[lang="en"] {
+  font-style: italic;
+}
+ol[type="A"] {
+  color: purple;
+  font-weight: bold;
+}
+
+ol[type="i"] {
+  color: green;
+}
